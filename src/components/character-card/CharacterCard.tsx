@@ -10,18 +10,20 @@ const { Meta } = Card;
 const CharacterCard = ({ id, name, image, location }: ICharacter) => {
     const navigate = useNavigate();
     return (
-        <Card
-            hoverable
-            onClick={() => { navigate('/character/' + id) }}
-            style={{ width: 300 }}
-            cover={
-                <img className="character_img" src={image} alt={name} />
-            }>
-            <Meta
-                title={name}
-                description={location?.name}
-            />
-        </Card >
+        <div className="character-card">
+            <Card
+                hoverable
+                onClick={() => { navigate('/character/' + id) }}
+                style={{ width: 300 }}
+                cover={
+                    <img className="character_img" src={image} alt={name} />
+                }>
+                <Meta
+                    title={name}
+                    description={location?.name}
+                />
+            </Card >
+        </div>
     );
 };
 

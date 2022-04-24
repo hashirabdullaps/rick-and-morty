@@ -11,6 +11,8 @@ export const FETCH_CHARACTER_DETAIL = gql`
       image
       name
       status
+      species
+      gender
       origin {
         name
       }

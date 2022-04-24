@@ -1,30 +1,61 @@
-.characterDetail {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    background: #e6e0bc;
+.character-detail-card {
+    background: white;
+    border-radius: 50px 50px 0 0;
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
     font-family: monospace;
-    min-height: 100vh;
-    padding: 2em;
-}
-.profile_wrapper {
-    border: 1px solid white;
-    margin: 2em;
-    text-align: center;
-    width: calc(100% - 2em);
-}
-.characterDetail img {
-    border-radius: 4px;
-    margin: 1em;
-    max-width: 90%;
-}
+  }
 
-.characterDetail button {
-    padding: 0 2em;
-    margin-left: 2em;
-}
+  .character-detail-card .character-detail-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50px 0 0 0;
+  }
 
-.details_wrapper {
-    width: 90%;
-    padding: 2em;
-}
+  .character-detail-card .character-information-row {
+    display: flex;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    margin: 10% auto;
+  }
+
+  .character-detail-card .character-name-row {
+    background: #091338;
+    height: 70px;
+    width: 100%;
+    padding-left: 20px;
+    font-weight: bolder;
+    font-size: 36px;
+    padding-top: 6px;
+    color: white;
+  }
+
+  .info-item {
+    display: inline-block;
+    width: 100%;
+    padding: 2%;
+    font-size: calc(6px + 1vw);
+    font-weight: bolder;
+    color: black;
+  }
+
+  .info-item span {
+    margin: 6px;
+    font-weight: normal;
+    color: #3b3c40;
+  }
+
+  .character-episode-row {
+    background: #c09b7569;
+    margin-bottom: 40px;
+  }
+
+  .character-episode-row h1 {
+    margin: 20px;
+  }
+
+  .character-header-row {
+    margin: 40px auto 0 auto;
+    width: 42%;     
+  }
