@@ -1,7 +1,16 @@
 .characterList {
-    padding: 1.5em;
+    padding: 1em;
+    background: #c09b7569;
 }
-.spinner-loading {
-    margin: 0 auto;
+
+.characterList h1 {
+    font-size: 35px;
     text-align: center;
+    font-weight: bold;
+    color: #562e36;
+}
+
+
+.characterList_scroll {
+    overflow-x: hidden !important;
 }

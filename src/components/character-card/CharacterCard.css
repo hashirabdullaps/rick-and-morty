@@ -11,4 +11,6 @@
   transform: scale(0.95);
 }
 
-
+.ant-card-body {
+  background: #f8efc6;
+}

@@ -7,7 +7,7 @@ import "./CharacterCard.css";
 
 const { Meta } = Card;
 
-const CharacterCard = ({ id, name, image, status, location }: ICharacter) => {
+const CharacterCard = ({ id, name, image, location }: ICharacter) => {
     const navigate = useNavigate();
     return (
         <Card
@@ -21,7 +21,6 @@ const CharacterCard = ({ id, name, image, status, location }: ICharacter) => {
                 title={name}
                 description={location?.name}
             />
-            <p><b>Status: </b>{status}</p>
         </Card >
     );
 };

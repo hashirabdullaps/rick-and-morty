@@ -4,7 +4,7 @@
 }
 
 .header {
-  background: black !important;
+  background: #1e2e2b  !important;
   display: flex;
   justify-content: center;
   align-items: center;

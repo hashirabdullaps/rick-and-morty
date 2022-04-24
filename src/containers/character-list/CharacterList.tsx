@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Row, Col, Spin, Space } from "antd";
+import { Row, Col, Spin } from "antd";
 
 import CharacterCard from "../../components/character-card/CharacterCard";
 
@@ -21,7 +21,6 @@ const CharacterList = () => {
 
     useEffect(() => {
         getCharacters({ variables: { page: 1 } });
-        console.log('called ');
     }, []);
 
 
@@ -29,22 +28,21 @@ const CharacterList = () => {
 
     return (
         <div className="characterList">
+            <h1>All Characters</h1>
             <InfiniteScroll
-                className="characterList"
+                className="characterList_scroll"
                 dataLength={count}
                 next={loadMore}
                 hasMore={true}
                 loader={nextPage !== null ? <Spin className="spinner-loading" size="large" /> : <></>}
             >
-                <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
-                    <Row gutter={[16, 16]} >
-                        {characters?.map((character) => {
-                            return (<Col key={`${character.id} - ${character.name}`} flex='1'>
-                                <CharacterCard  {...character} />
-                            </Col >)
-                        })}
-                    </Row>
-                </Space>
+                <Row gutter={[16, 16]} justify="center">
+                    {characters?.map((character) => {
+                        return (<Col key={`${character.id} - ${character.name}`} flex='1'>
+                            <CharacterCard  {...character} />
+                        </Col >)
+                    })}
+                </Row>
             </InfiniteScroll>
         </div>
     );

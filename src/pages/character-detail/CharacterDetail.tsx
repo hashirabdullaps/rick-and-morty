@@ -7,7 +7,6 @@ import { Row, Col, Spin, Button } from "antd";
 const CharacterDetailPage = () => {
 
     let params = useParams();
-    console.log(params);
     const navigate = useNavigate();
     const { character, loading } = useFetchCharacterDetailQuery(Number(params?.id));
 
@@ -27,10 +26,10 @@ const CharacterDetailPage = () => {
 
     return (<>
 
-        {loading && <div style={{ height: "50vh" }}><Spin></Spin></div>}
+        {loading && <div style={{ height: "50vh" }}><Spin className="spinner-loading"></Spin></div>}
         {!loading &&
             <div className="characterDetail">
-                <Button onClick={() => { navigate('/') }}>Back </Button>
+                <Button onClick={() => { navigate('/') }} shape="round" type="dashed" ghost danger>Back </Button>
                 <div className="profile_wrapper">
                     <img src={character?.image} alt="profile image" />
                     <h2>{character?.name}</h2>
