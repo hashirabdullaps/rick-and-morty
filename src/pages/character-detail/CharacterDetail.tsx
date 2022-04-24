@@ -34,7 +34,7 @@ const CharacterDetailPage = () => {
 
     return (<>
         <Row className="character-header-row">
-            <Button onClick={() => { navigate('/') }} shape="round" type="dashed" ghost danger>Back </Button>
+            <Button onClick={() => { navigate('/') }} shape="round" type="dashed" danger>Back </Button>
         </Row>
         {loading && <div style={{ height: "50vh" }}><Spin className="spinner-loading"></Spin></div>}
         {!loading && <div className="character-detail-card">

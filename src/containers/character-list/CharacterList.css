@@ -1,6 +1,7 @@
 .characterList {
     padding: 1em;
     background: #c09b7569;
+    font-family: monospace;
 }
 
 .characterList h1 {
