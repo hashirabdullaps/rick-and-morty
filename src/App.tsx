@@ -6,7 +6,7 @@ import './App.css';
 import notFound from './assets/images/404.png'
 import LayoutWrapper from './layout/Layout';
 import Home from './pages/home/Home';
-
+import CharacterDetailPage from './pages/character-detail/CharacterDetail';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LayoutWrapper />}>
           <Route index element={<Home />} />
+          <Route path="/character/:id" element={<CharacterDetailPage />} />
           <Route path="/404-Not-Found" element={<NoMatch />} />
           <Route
             path="*"

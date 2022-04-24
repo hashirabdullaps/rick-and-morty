@@ -19,7 +19,9 @@ interface IQuery {
   count: number;
   totalCount: number;
   currentPage: number;
+  nextPage: number | null;
   getCharacters: (payload: { variables: { page: number } }) => any;
+  fetchMoreCharacters: (page: number) => any;
 }
 
 export const FETCH_CHARACTERS = gql`
@@ -45,12 +47,28 @@ export const FETCH_CHARACTERS = gql`
   }
 `;
 
+export const mergeCharacter = (existing: any = [], incoming: any) => {
+  let existingResults: any[] = [];
+  if (existing && existing.results) {
+    existingResults = existing.results;
+  }
+  return {
+    info: incoming?.info,
+    results: [...existingResults, ...incoming?.results],
+  };
+};
+
 export function useFetchCharactersQuery(): IQuery {
-  const [getCharacters, { loading, data }] =
+  const [getCharacters, { loading, data, fetchMore }] =
     useLazyQuery<FetchCharactersQueryResponse>(FETCH_CHARACTERS);
 
   const prevPage = data?.characters?.info?.prev;
   const currentPage = prevPage && prevPage != null ? prevPage + 1 : 1;
+  const nextPage = data?.characters.info?.next || null;
+
+  const fetchMoreCharacters = (page: number) => {
+    fetchMore({ variables: { page: page } });
+  };
 
   return {
     characters: data?.characters?.results,
@@ -58,6 +76,8 @@ export function useFetchCharactersQuery(): IQuery {
     count: data?.characters.results?.length || 0,
     totalCount: data?.characters.info?.count || 0,
     currentPage: currentPage,
+    nextPage: nextPage,
     getCharacters,
+    fetchMoreCharacters,
   };
 }

@@ -3,7 +3,7 @@ import CharacterList from "../../containers/character-list/CharacterList";
 
 const HomePage = () => {
     useEffect(() => {
-        document.title = "Rick and Morty";;
+        document.title = "Rick and Morty";
     }, []);
     return (
         <>
