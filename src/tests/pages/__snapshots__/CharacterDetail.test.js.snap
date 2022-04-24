@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Character Detail component 1`] = `
+<div
+  style={
+    Object {
+      "height": "50vh",
+    }
+  }
+>
+  <div
+    className="ant-spin ant-spin-spinning spinner-loading"
+  >
+    <span
+      className="ant-spin-dot ant-spin-dot-spin"
+    >
+      <i
+        className="ant-spin-dot-item"
+      />
+      <i
+        className="ant-spin-dot-item"
+      />
+      <i
+        className="ant-spin-dot-item"
+      />
+      <i
+        className="ant-spin-dot-item"
+      />
+    </span>
+  </div>
+</div>
+`;

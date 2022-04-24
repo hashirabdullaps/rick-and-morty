@@ -21,7 +21,7 @@ const CharacterList = () => {
 
     useEffect(() => {
         getCharacters({ variables: { page: 1 } });
-    }, []);
+    }, [getCharacters]);
 
 
     const loadMore = () => nextPage !== null && fetchMoreCharacters(currentPage + 1);

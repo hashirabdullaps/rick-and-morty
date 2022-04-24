@@ -2,7 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useFetchCharacterDetailQuery } from '../../graphql/queries/useFetchCharacterDetailQuery'
 import "./CharacterDetail.css";
-import { Row, Col, Spin, Button } from "antd";
+import { Spin, Button } from "antd";
 
 const CharacterDetailPage = () => {
 
@@ -31,7 +31,7 @@ const CharacterDetailPage = () => {
             <div className="characterDetail">
                 <Button onClick={() => { navigate('/') }} shape="round" type="dashed" ghost danger>Back </Button>
                 <div className="profile_wrapper">
-                    <img src={character?.image} alt="profile image" />
+                    <img src={character?.image} alt="profile" />
                     <h2>{character?.name}</h2>
                 </div>
                 <div className="details_wrapper">

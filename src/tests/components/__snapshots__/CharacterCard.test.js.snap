@@ -1,5 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CharacterCard component should test CharacterCard component 1`] = `
+<div
+  className="ant-card ant-card-bordered ant-card-hoverable"
+  onClick={[Function]}
+  style={
+    Object {
+      "width": 300,
+    }
+  }
+>
+  <div
+    className="ant-card-cover"
+  >
+    <img
+      alt="test"
+      className="character_img"
+      src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+    />
+  </div>
+  <div
+    className="ant-card-body"
+    style={Object {}}
+  >
+    <div
+      className="ant-card-meta"
+    >
+      <div
+        className="ant-card-meta-detail"
+      >
+        <div
+          className="ant-card-meta-title"
+        >
+          test
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`should test CharacterCard component 1`] = `
 <div
   className="ant-card ant-card-bordered ant-card-hoverable"
