@@ -1,0 +1,12 @@
+.header__logo {
+    cursor: pointer;
+    height: 90%;
+}
+
+.header {
+  background: black !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 128px !important;
+}

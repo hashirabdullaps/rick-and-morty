@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Footer component 1`] = `
+<footer
+  className="ant-layout-footer footer"
+>
+  <a
+    className="footer__link"
+    href="/"
+  >
+    Rick and Morty by Hashir © 2022
+  </a>
+</footer>
+`;

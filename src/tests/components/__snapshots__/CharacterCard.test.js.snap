@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test CharacterCard component 1`] = `
+<div
+  className="ant-card ant-card-bordered ant-card-hoverable"
+  style={
+    Object {
+      "width": 300,
+    }
+  }
+>
+  <div
+    className="ant-card-cover"
+  >
+    <img
+      className="character_img"
+    />
+  </div>
+  <div
+    className="ant-card-body"
+    style={Object {}}
+  >
+    <div
+      className="ant-card-meta"
+    >
+      <div
+        className="ant-card-meta-detail"
+      >
+        <div
+          className="ant-card-meta-description"
+        >
+           
+        </div>
+      </div>
+    </div>
+    <p>
+      <b>
+        Status: 
+      </b>
+    </p>
+  </div>
+</div>
+`;
