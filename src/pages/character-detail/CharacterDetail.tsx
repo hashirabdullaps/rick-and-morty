@@ -33,46 +33,51 @@ const CharacterDetailPage = () => {
     ];
 
     return (<>
-        <Row className="character-header-row">
-            <Button onClick={() => { navigate('/') }} shape="round" type="dashed" danger>Back </Button>
-        </Row>
+
         {loading && <div style={{ height: "50vh" }}><Spin className="spinner-loading"></Spin></div>}
-        {!loading && <div className="character-detail-card">
-            <Row>
-                <Col span={12}>
-                    <Row className="character-image-row">
-                        <img
-                            className="character-detail-image"
-                            alt="character"
-                            src={character?.image}
-                        />
+        {!loading &&
+            <div>
+                <Row className="character-header-row">
+                    <Button onClick={() => { navigate('/') }} shape="round" type="dashed" danger>Back </Button>
+                </Row>
+                <div className="character-detail-card">
+                    <Row>
+                        <Col span={12}>
+                            <Row className="character-image-row">
+                                <img
+                                    className="character-detail-image"
+                                    alt="character"
+                                    src={character?.image}
+                                />
+                            </Row>
+                        </Col>
+                        <Col span={12}>
+                            <Row className="character-information-row">
+                                {infoItems.map((item: any, key: number) => (
+                                    <div key={key} className="info-item">
+                                        {item.name}:
+                                        <span style={{ color: item.color ? item.color : 'black' }}>
+                                            {item.value}
+                                        </span>
+                                    </div>
+                                ))}
+                            </Row>
+                        </Col>
                     </Row>
-                </Col>
-                <Col span={12}>
-                    <Row className="character-information-row">
-                        {infoItems.map((item: any, key: number) => (
-                            <div key={key} className="info-item">
-                                {item.name}:
-                                <span style={{ color: item.color ? item.color : 'black' }}>
-                                    {item.value}
-                                </span>
-                            </div>
-                        ))}
+                    <Row className="character-name-row">{character?.name}</Row>
+                    <Row className="character-episode-row">
+                        <Col span={12}>
+                            <h1>Episode:</h1>
+                            <ul>
+                                {character?.episode?.map((episode, index) => {
+                                    return <li key={`${episode.name} ${index}`}>{episode.name}-({episode.episode})</li>
+                                })}
+                            </ul>
+                        </Col>
                     </Row>
-                </Col>
-            </Row>
-            <Row className="character-name-row">{character?.name}</Row>
-            <Row className="character-episode-row">
-                <Col span={12}>
-                    <h1>Episode:</h1>
-                    <ul>
-                        {character?.episode?.map((episode, index) => {
-                            return <li key={`${episode.name} ${index}`}>{episode.name}-({episode.episode})</li>
-                        })}
-                    </ul>
-                </Col>
-            </Row>
-        </div>}
+                </div>
+            </div>
+        }
     </>)
 };
 

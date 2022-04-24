@@ -5,22 +5,22 @@
     max-width: 800px;
     margin: 40px auto 0 auto;
     font-family: monospace;
-  }
+}
 
-  .character-detail-card .character-detail-image {
+.character-detail-card .character-detail-image {
     width: 100%;
     height: auto;
     border-radius: 50px 0 0 0;
-  }
+}
 
-  .character-detail-card .character-information-row {
+.character-detail-card .character-information-row {
     display: flex;
     padding-left: 20px;
     flex-wrap: wrap;
     margin: 10% auto;
-  }
+}
 
-  .character-detail-card .character-name-row {
+ .character-detail-card .character-name-row {
     background: #091338;
     height: 70px;
     width: 100%;
@@ -29,33 +29,33 @@
     font-size: 30px;
     padding-top: 6px;
     color: white;
-  }
+}
 
-  .info-item {
+.info-item {
     display: inline-block;
     width: 100%;
     padding: 2%;
     font-size: calc(6px + 1vw);
     font-weight: bolder;
     color: black;
-  }
+}
 
-  .info-item span {
+.info-item span {
     margin: 6px;
     font-weight: normal;
     color: #3b3c40;
-  }
+}
 
-  .character-episode-row {
+.character-episode-row {
     background: #c09b7569;
     margin-bottom: 40px;
-  }
+}
 
-  .character-episode-row h1 {
+.character-episode-row h1 {
     margin: 20px;
-  }
+}
 
-  .character-header-row {
+.character-header-row {
     margin: 40px auto 0 auto;
-    width: 42%;     
-  }
+    width: 80%;     
+}
