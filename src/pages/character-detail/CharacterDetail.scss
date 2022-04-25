@@ -1,0 +1,76 @@
+.detail-wrapper {
+    background: white;
+    width: 100%;
+    font-family: monospace;
+    color: white;
+    background-image: url('../../assets/images/space.jpg');
+
+}
+.character-detail-card {
+
+    .character-detail-image {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 4%;
+        border: 1px solid black;
+    }
+
+    .character-information-row {
+        display: flex;
+        padding-left: 20px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .character-name-row {
+        background: #091338;
+        height: 70px;
+        width: 100%;
+        padding-left: 2rem;
+        font-weight: bolder;
+        font-size: calc(20px + 1vw);
+        padding-top: 6px;
+        color: white;
+    }
+    
+    .character-image-row {
+        margin: 2rem ;
+    }
+
+    .info-item {
+        display: inline-block;
+        width: 100%;
+        padding: 2%;
+        font-size: calc(6px + 1vw);
+        font-weight: bolder;
+        
+        span {
+            margin: 6px;
+            font-weight: normal;
+        }
+    }
+
+    .character-episode-row {
+        background: #c09b7569;
+        // border-radius: 0 0 50px 50px;
+        padding-bottom: 1em;
+        padding-left: 4em;
+
+        h1 {
+            margin: 20px;
+            color: white;
+        }
+
+        button {
+            margin-top: 2rem;
+            margin-left: 1rem;
+        }
+    }
+
+}
+
+.character-header-row {
+    padding-top: 10px;
+    width: 80%;     
+}

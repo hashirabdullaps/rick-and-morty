@@ -3,7 +3,7 @@ import { Card } from "antd";
 
 import ICharacter from '../../types/ICharacter'
 //styles
-import "./CharacterCard.css";
+import "./CharacterCard.scss";
 
 const { Meta } = Card;
 

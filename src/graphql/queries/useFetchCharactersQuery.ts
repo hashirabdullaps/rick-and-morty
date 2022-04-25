@@ -52,6 +52,11 @@ export const mergeCharacter = (existing: any = [], incoming: any) => {
   if (existing && existing.results) {
     existingResults = existing.results;
   }
+
+  if (existing?.info?.next === incoming?.info?.next) {
+    return existing;
+  }
+
   return {
     info: incoming?.info,
     results: [...existingResults, ...incoming?.results],

@@ -1,6 +1,6 @@
 import { Layout } from "antd";
 
-import './Footer.css';
+import './Footer.scss';
 
 const Footer = () => {
     return <Layout.Footer className="footer">

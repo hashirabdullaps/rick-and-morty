@@ -2,7 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import ICharacter from "../../types/ICharacter";
 
 export interface FetchCharacterDetailQueryResponse {
-    character: ICharacter;
+  character: ICharacter;
 }
 export const FETCH_CHARACTER_DETAIL = gql`
   query ($id: ID!) {
@@ -28,19 +28,19 @@ export const FETCH_CHARACTER_DETAIL = gql`
 `;
 
 interface IQuery {
-    character: ICharacter | undefined;
-    loading: boolean;
+  character: ICharacter | undefined;
+  loading: boolean;
 }
 
 export function useFetchCharacterDetailQuery(id: number): IQuery {
-    const { data, loading } = useQuery<FetchCharacterDetailQueryResponse>(
-        FETCH_CHARACTER_DETAIL,
-        {
-            variables: {
-                id: id,
-            },
-        }
-    );
+  const { data, loading } = useQuery<FetchCharacterDetailQueryResponse>(
+    FETCH_CHARACTER_DETAIL,
+    {
+      variables: {
+        id: id,
+      },
+    }
+  );
 
-    return { character: data?.character, loading };
+  return { character: data?.character, loading };
 }
