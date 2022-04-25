@@ -7,11 +7,12 @@
     border-radius: 1em;
     margin: 2em;
     border-width: 2px;
-    border-color: black;
+    border-color: white;
   }
 
   .ant-card:hover {
     transform: scale(1.07);
+    border-color: #e45f6f;
   }
   
   .ant-card-cover img {
