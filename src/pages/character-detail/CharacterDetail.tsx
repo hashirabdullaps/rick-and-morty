@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useFetchCharacterDetailQuery } from '../../graphql/queries/useFetchCharacterDetailQuery'
 import "./CharacterDetail.scss";
 import { Spin, Button, Row, Col } from "antd";
+import { ArrowLeftOutlined } from "@ant-design/icons";
 
 const CharacterDetailPage = () => {
 
@@ -64,7 +65,7 @@ const CharacterDetailPage = () => {
                     <Row className="character-name-row">{character?.name}</Row>
                     <Row className="character-episode-row">
                         <Col span={12}>
-                            <Button onClick={() => { navigate('/') }} shape="round" type="dashed" ghost> Back to Home </Button>
+                            <Button onClick={() => { navigate('/') }} shape="round" type="dashed" ghost> <ArrowLeftOutlined /> Back to Home </Button>
                             <h1>Episodes:</h1>
                             <ul>
                                 {character?.episode?.map((episode, index) => {

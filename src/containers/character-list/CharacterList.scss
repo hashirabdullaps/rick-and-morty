@@ -21,3 +21,10 @@
         flex-wrap: wrap;
         justify-content: space-around;
 }
+
+.scroll-top {
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    z-index: 100;
+}

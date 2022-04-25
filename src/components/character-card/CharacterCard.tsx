@@ -14,7 +14,7 @@ const CharacterCard = ({ id, name, image, location }: ICharacter) => {
             <Card
                 hoverable
                 onClick={() => { navigate('/character/' + id) }}
-                style={{ width: 300 }}
+                style={{ maxWidth: 300 }}
                 cover={
                     <img className="character_img" src={image} alt={name} />
                 }>

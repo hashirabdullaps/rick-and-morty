@@ -1,11 +1,14 @@
 .header__logo {
     cursor: pointer;
-    height: 90%;
+    height: 100%;
 }
 
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 128px !important;
+  position: fixed;
+  z-index: 1;
+  width: 100%;    
+  filter: drop-shadow(2px 4px 6px #001529);
 }
