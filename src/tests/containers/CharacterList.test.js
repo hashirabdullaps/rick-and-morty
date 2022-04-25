@@ -3,22 +3,26 @@ import renderer from 'react-test-renderer';
 import CharacterList from '../../containers/character-list/CharacterList';
 import { MockedProvider } from '@apollo/client/testing';
 import { BrowserRouter } from "react-router-dom";
-import { act } from 'react-dom/test-utils';
+import { act } from '@testing-library/react';
 
-const mocks = [];
+describe('CharacterList component', () => {
 
-test('should test CharacterList component', () => {
+    test('should test CharacterList component', () => {
 
-    act(() => {
-        const component = renderer.create(
-            <MockedProvider mocks={mocks} addTypename={false}>
-                <BrowserRouter>
-                    <CharacterList />
-                </BrowserRouter>
-            </MockedProvider>
-        );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot();
-    })
+        const mocks = [];
+        act(() => {
+            const component = renderer.create(
+                <MockedProvider mocks={mocks} >
+                    <BrowserRouter>
+                        <CharacterList />
+                    </BrowserRouter>
+                </MockedProvider>);
 
-});
+            let tree = component.toJSON();
+            expect(tree).toMatchSnapshot();
+        })
+
+    });
+
+})
+

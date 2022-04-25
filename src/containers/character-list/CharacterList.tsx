@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Button, Spin } from "antd";
 
 import CharacterCard from "../../components/character-card/CharacterCard";
@@ -27,10 +27,17 @@ const CharacterList = () => {
 
     const loadMore = () => nextPage !== null && fetchMoreCharacters(currentPage + 1);
 
+    const handleScroll = (ref: any) => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <div className="characterList">
             <h1>All Characters</h1>
-            <Button className="scroll-top" shape="round" onClick={() => { window.scrollTo(0, 0) }} type="dashed" ghost>
+            <Button className="scroll-top" shape="round" onClick={handleScroll} type="dashed" ghost>
                 <ArrowUpOutlined />
             </Button>
             <InfiniteScroll
