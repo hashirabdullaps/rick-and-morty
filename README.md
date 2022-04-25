@@ -5,11 +5,13 @@
  
 ## Specification
 ### System Specification
-- React: 18.0.0
-- React-Router-Dom: 6.3.0
 - Node: 17.14.0
 - npm: 8.3.1
 - yarn: 1.22.18
+
+### Library Version
+- React: 18.0.0
+- React-Router-Dom: 6.3.0
 
 ### .env Variables
 
