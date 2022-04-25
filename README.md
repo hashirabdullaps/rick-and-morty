@@ -1,8 +1,5 @@
-
 # React Web app to lists Rick and Morty's characters.
 
- Live Preview Heroku [HERE](https://rick-and-monty-hashir.herokuapp.com/): 
- 
 ## Specification
 ### System Specification
 - Node: 17.14.0
@@ -19,7 +16,14 @@
 
 ### Setup Steps
 
-- Install package with yarn
+Use Node Version Manager(NVM) to use the specified (latest) node version. [Installation setup here](https://heynode.com/tutorial/install-nodejs-locally-nvm/)
+
+`nvm install v17.14.0`
+
+`nvm use v17.14.0`
+
+- Install package with yarn - `yarn install`
+
 - Copy example environment `cp .env.example .env`
 
 ### Available Scripts
@@ -34,18 +38,25 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 Launches the test runner in the interactive watch mode.
+
 ### `yarn build`
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-
 ## Structure
 ├────── assets : images & styles resources
+
 ├────── components : pure components
+
 ├────── containers : complex components with store access
+
 ├────── graphql : grapqhl client configurations & queries
+
 ├────── layout : layout components & template
+
 ├────── pages: app pages
+
 ├────── types : typescript type definition
 
-
+## Live Preview
+Heroku Deployed Live Preview: [CLICK HERE](https://rick-and-monty-hashir.herokuapp.com/): 
