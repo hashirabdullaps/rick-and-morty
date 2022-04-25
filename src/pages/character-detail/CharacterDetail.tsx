@@ -26,11 +26,13 @@ const CharacterDetailPage = () => {
     }
 
     const infoItems: any = [
-        { name: 'Status', value: character?.status, color: getColor(character?.status) },
         { name: 'Species', value: character?.species },
+        { name: 'Subspecies', value: character?.type || 'None' },
         { name: 'Gender', value: character?.gender },
         { name: 'Origin', value: character?.origin?.name },
         { name: 'Location', value: character?.location?.name },
+        { name: 'Status', value: character?.status, color: getColor(character?.status) },
+
     ];
 
     return (<>

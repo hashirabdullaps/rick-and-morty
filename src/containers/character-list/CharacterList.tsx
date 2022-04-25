@@ -30,7 +30,9 @@ const CharacterList = () => {
     return (
         <div className="characterList">
             <h1>All Characters</h1>
-            <Button className="scroll-top" shape="round" onClick={() => { window.scrollTo(0, 0) }} type="dashed" ghost><ArrowUpOutlined /></Button>
+            <Button className="scroll-top" shape="round" onClick={() => { window.scrollTo(0, 0) }} type="dashed" ghost>
+                <ArrowUpOutlined />
+            </Button>
             <InfiniteScroll
                 className="characterList_scroll"
                 dataLength={count}

@@ -9,7 +9,7 @@ exports[`CharacterCard component should test CharacterCard component 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "width": 300,
+        "maxWidth": 300,
       }
     }
   >

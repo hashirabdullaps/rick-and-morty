@@ -13,6 +13,7 @@ export const FETCH_CHARACTER_DETAIL = gql`
       status
       species
       gender
+      type
       origin {
         name
       }
